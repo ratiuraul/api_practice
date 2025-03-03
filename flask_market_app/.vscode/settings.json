@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:flask_market_app}/var/market-instance/market.db",
+            "name": "market_db"
+        }
+    ]
+}
