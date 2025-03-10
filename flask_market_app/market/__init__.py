@@ -1,7 +1,12 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///market.db'
-db = SQLAlchemy(app)
+import os
+from dotenv import load_dotenv
 
-from market import routes
+load_dotenv()
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URI')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+db = SQLAlchemy(app)
+from market import routes  # nopep8
