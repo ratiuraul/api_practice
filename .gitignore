@@ -4,7 +4,9 @@ flask_market_app/include
 flask_market_app/lib
 flask_market_app/lib64
 flask_market_app/__pycache__
-flask_market_app/pyenv.cfg
+flas_market_app/pyvenv.cfg
+
+flask_market_app/pynv.cfg
 flask_market_app/var/
 flask_market_app/pyenv.cfg
 flask_market_app/.vscode
