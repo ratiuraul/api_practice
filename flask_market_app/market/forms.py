@@ -37,3 +37,17 @@ class RegisterForm(FlaskForm):
                                   validators.DataRequired()
                               ])
     submit = SubmitField(label='Create Account')
+
+
+class LoginForm(FlaskForm):
+    username = StringField(label='User Name:',
+                           validators=[
+                               validators.DataRequired()
+                           ])
+
+    password = PasswordField(label='Password:',
+                             validators=[
+                                 validators.DataRequired()
+                             ])
+
+    submit = SubmitField(label='Login')
