@@ -17,6 +17,13 @@ class User(db.Model, UserMixin):
     items = db.relationship('Item', backref='owned_user', lazy=True)
 
     @property
+    def prettier_budget(self):
+        budget = str(self.budget)
+        if len(budget) >= 4:
+            return f"{budget[:-3]},{budget[-3:]}"
+        return budget
+
+    @property
     def password(self):
         raise (NotImplementedError("Password can only be set !"))
 
