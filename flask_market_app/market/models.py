@@ -52,3 +52,9 @@ class Item(db.Model):
         self.owner = user.id
         user.budget -= self.price
         db.session.commit()
+
+    def remove_from_user(self, user):
+        print("DEBUG")
+        self.owner = None
+        user.budget += self.price
+        db.session.commit()
